@@ -1,0 +1,203 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fef4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header .subtitulo {
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+/* Sección de contenido */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dedicatoria */
+.dedicatoria {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dedicatoria h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ff6f61;
+}
+
+.dedicatoria p {
+    font-size: 1.2em;
+    color: #555;
+}
+.image_1{
+    width:250px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Sección Collage */
+.collage {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.collage h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff6f61;
+}
+
+.collage-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajusta el número de columnas */
+    gap: 15px;
+    justify-items: center;
+}
+
+.collage-item {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collage-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 0.9em;
+}
+
+/* Estilos del Corazón */
+.heart {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: latir 1s ease-in-out infinite;
+    margin: 20px auto 0;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    left: 25px;
+    top: 0;
+}
+
+@keyframes latir {
+    0%, 100% {
+        transform: scale(1) rotate(-44deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(-44deg);
+    }
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header .subtitulo {
+        font-size: 1em;
+    }
+
+    .dedicatoria h2 {
+        font-size: 1.5em;
+    }
+
+    .dedicatoria p {
+        font-size: 1em;
+    }
+
+    .collage-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .heart {
+        width: 40px;
+        height: 40px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 40px;
+        height: 40px;
+    }
+}
